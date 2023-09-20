@@ -1,0 +1,150 @@
+/* Font styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Background and text color */
+  body {
+    background: #b9ebed;
+    color: #333;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Form styles */
+  .new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  /* Button styles */
+  .btn {
+    background: #2395c6;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+  }
+  
+  .btn:hover,
+  .btn:focus-visible {
+    background: #7093b4;
+  }
+  
+  /* Delete button styles */
+  .btn.btn-danger {
+    background: #d9534f;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn.btn-danger:hover,
+  .btn.btn-danger:focus-visible {
+    background: #c9302c;
+  }
+  
+  /* Input field styles */
+  .new-item-form input {
+    outline: none;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    color: #333;
+  }
+  
+  .new-item-form input:focus {
+    border: 1px solid #007acc;
+  }
+  
+  /* Header styles */
+  .header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* List styles */
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 1rem;
+  }
+  
+  .list li:has(input:checked) label {
+    color: #007acc;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .list li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .list li label {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .list li:has(input:focus-visible) label {
+    outline: 1px solid #007acc;
+  }
+  
+  .list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+  }
+  
+  .list li label::before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: #95abb5;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .list li label:hover::before {
+    background: #007acc;
+  }
+  
+  .list li:has(input:checked) label::before {
+    content: "✔";
+    background: #d9534f;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .list li:has(input:checked) label:hover::before {
+    background: #c9302c;
+  }
+  
